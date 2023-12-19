@@ -12,6 +12,20 @@
   </head>
 
   <body>
+    const configurationObject = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify({
+        dogName: "Byron",
+        dogBreed: "Poodle",
+      }),
+    };
+    
+    fetch("http://localhost:3000/dogs", configurationObject);
+    
     <h1>Sample Form</h1>
     <form action="http://localhost:3000/dogs" method="POST">
       <label> Dog Name: <input type="text" name="dogName" id="dogName" /></label><br />
